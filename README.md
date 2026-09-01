@@ -32,10 +32,10 @@ Bagian di bawah ini **isi bertahap** sesuai level yang sedang kalian kerjakan (l
 - Kelas: M
 
 ## Commit vs Push
-(tulis di sini)
+commit itu melakukan sebuah checkpoint untuk file yang nanti akan di simpan file .git local. Push untuk memberitahu remote repository,untuk mengupdate sesuai dengan yang ada di .git local project 
 
 ## Reproducibility
-(tulis di sini)
+jika anggota menjalankan program ini dengan versi yang berbeda, maka anggota yang mempunyai versi go yang lebih tua dibanding dengan versi projectnya akan mendapatkan compilation error
 
 ## Catatan Merge Conflict
 (tulis di sini)
