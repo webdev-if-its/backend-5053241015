@@ -29,7 +29,7 @@ func Sapa(nama string) string {
 // TODO(Level 5): gabungkan Nama, NRP, dan hasil runtime.Version() jadi satu
 // string siap cetak (lihat contoh format di SOAL.md).
 func CetakInfo(nama string) string {
-	return "Nama: " + nama + "\n" + "NRP: " + NRP + runtime.Version() + Sapa("Nendou")
+	return "Nama: " + nama + "\n" + "NRP: " + NRP + "\n" + runtime.Version() + "\n" + Sapa(nama)
 }
 
 func main() {

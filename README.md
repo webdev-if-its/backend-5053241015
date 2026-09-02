@@ -38,7 +38,7 @@ commit itu melakukan sebuah checkpoint untuk file yang nanti akan di simpan file
 jika anggota menjalankan program ini dengan versi yang berbeda, maka anggota yang mempunyai versi go yang lebih tua dibanding dengan versi projectnya akan mendapatkan compilation error
 
 ## Catatan Merge Conflict
-(tulis di sini)
+barik yang mentok berada di file main.go line 32. hal ini menyebabkan merge conflict karena adanya perbedaaan commit dari line di file dan line yang sama. Untuk menyelesaikannya kita tinggal menghapus penanda merge conflictnya seperti head dan nama branch yang di merge. Lalu hapus baris yang tidak tidak di inginkan. 
 
 ## Kenapa .gitignore Penting
 (tulis di sini)
