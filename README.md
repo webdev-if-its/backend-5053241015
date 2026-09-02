@@ -41,7 +41,7 @@ jika anggota menjalankan program ini dengan versi yang berbeda, maka anggota yan
 barik yang mentok berada di file main.go line 32. hal ini menyebabkan merge conflict karena adanya perbedaaan commit dari line di file dan line yang sama. Untuk menyelesaikannya kita tinggal menghapus penanda merge conflictnya seperti head dan nama branch yang di merge. Lalu hapus baris yang tidak tidak di inginkan. 
 
 ## Kenapa .gitignore Penting
-(tulis di sini)
+git ignore penting untuk memisahkan file mana yang bisa di masukan ke git dan file mana yang harusnya hanya ada di local. Contohnya file package yang dimana mempunyai ukuran yang besar tidak perlu di masukan ke git karena bisa di install via runtime masing masing. Juga file seperti .env yang mengandung beberapa rahasia  
 
 ## Refleksi
-(tulis di sini)
+untuk yang paling membingung kan si karena pertama kali pakai golang. Contohnya di level 3, karena terbiasa pakai javascript, ngecek null nya cuman dengan if(variable), eh ternyata error. dan yang saya pakai sekarang masih ngecek nullnya dengan cara apakah parameter args punya panjang lebih dari 1, yang paadahal ada cara yang lebih proper setelah saya cari cari lagi di internet.
