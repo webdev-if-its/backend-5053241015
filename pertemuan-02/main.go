@@ -10,10 +10,19 @@ func HitungSubtotal(qty int, hargaSatuan float64) float64 {
 }
 
 func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
-	panic("belum diimplementasikan")
+	if len(qty) != len(hargaSatuan) {
+		return 0
+	}
+	var total float64
+	for i := 0; i < len(qty); i++ {
+		total += float64(qty[i] * int(hargaSatuan[i]))
+	}
+
+	return total
 }
 
 func TerapkanPajak(total float64, tarifPajak float64) float64 {
+	// return total + total*tarifPajak
 	panic("belum diimplementasikan")
 }
 
@@ -51,4 +60,10 @@ func HitungOngkosKirim(beratKg float64, jarakKm float64) (float64, error) {
 
 func main() {
 	fmt.Println("Sales Order Processor - pertemuan 2")
+
+	qty := []int{10}
+	harga := []float64{10}
+
+	fmt.Println(HitungTotalPesanan(qty, harga))
+
 }
