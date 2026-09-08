@@ -23,11 +23,16 @@ func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
 
 func TerapkanPajak(total float64, tarifPajak float64) float64 {
 	return total + total*tarifPajak
-	panic("belum diimplementasikan")
 }
 
 func HitungDiskon(total float64) float64 {
-	panic("belum diimplementasikan")
+	if total >= 1000000 {
+		return total * 0.10
+	} else if total >= 500000 {
+		return total * 0.05
+	} else {
+		return 0
+	}
 }
 
 func TotalSetelahDiskon(qty []int, hargaSatuan []float64, tarifPajak float64) float64 {
