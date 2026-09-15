@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"strings"
 )
 
 // TODO(Level 1): lihat SOAL.md untuk kontrak lengkap tiap fungsi di bawah.
@@ -33,6 +34,11 @@ type TokoTugas struct {
 }
 
 func TambahTugas(toko *TokoTugas, judul string) (Task, error) {
+
+	if strings.TrimSpace(judul) == "" {
+		return Task{}, ErrInputKosong
+	}
+
 	var tugasBaru Task = Task{
 		ID:      toko.NextID + 1,
 		Judul:   judul,
