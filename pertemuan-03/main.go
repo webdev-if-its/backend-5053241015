@@ -70,11 +70,21 @@ func HapusTugas(toko *TokoTugas, id int) error {
 	return ErrTugasTidakDitemukan
 }
 
+func LogHapusTugas(toko *TokoTugas, err error, id int) {
+	if err == nil {
+		toko.Log = append(toko.Log, "berhasil hapus tugas dengan id :"+fmt.Sprint(id))
+	} else {
+		toko.Log = append(toko.Log, "gagal hapus tugas dengan id :"+fmt.Sprint(id))
+	}
+}
+
 // HapusTugasTercatat memanggil HapusTugas, lalu memakai defer untuk
 // MENCATAT hasilnya ke toko.Log -- baik saat berhasil maupun saat gagal.
 func HapusTugasTercatat(toko *TokoTugas, id int) error {
+	err := HapusTugas(toko, id)
+	defer LogHapusTugas(toko, err, id)
 
-	panic("belum diimplementasikan")
+	return err
 }
 
 // AmankanPanggilan menjalankan fn. Kalau fn panic, AmankanPanggilan
