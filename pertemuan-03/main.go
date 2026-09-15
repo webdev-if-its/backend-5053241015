@@ -50,7 +50,7 @@ func LihatTugas(toko *TokoTugas, id int) (Task, error) {
 			return t, nil
 		}
 	}
-	panic("blm diimplementasikan")
+	return Task{}, ErrTugasTidakDitemukan
 	// return nil, errors.New("ayayaya")
 }
 
